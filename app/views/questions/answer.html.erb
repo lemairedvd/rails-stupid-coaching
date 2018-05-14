@@ -1,0 +1,21 @@
+<h1>Stupid Coaching</h1>
+
+<% if @questions == "I am going to work" %>
+<%= @questions %>
+<%= "-You" %>
+<br>
+<%= "Great!" %><br>
+<%= "-Your Coach" %><br>
+<% elsif @questions.include? "?" %>
+<%= @questions %><br>
+<%= "-You" %><br>
+<%= "Silly question, get dressed and go to work!" %><br>
+<%= "-Your Coach" %><br>
+<% else %>
+<%= @questions %><br>
+<%= "-You" %><br>
+<br>
+<%= "I don't care, get dressed and go to work!" %><br>
+<%= "-Your Coach" %><br>
+<% end %>
+<%= link_to "Ask a new question", question_path %>
